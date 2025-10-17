@@ -17,7 +17,7 @@ export default function EventsPage() {
         <div className="relative z-10">
           <h1 className="text-4xl md:text-6xl font-bold mb-4">Events</h1>
           <p className="text-lg max-w-2xl mx-auto">
-            Discover our entrepreneurial journey through exciting events
+            Discover our exciting lineup of events where innovation meets action.
           </p>
         </div>
       </section>
@@ -74,9 +74,25 @@ export default function EventsPage() {
             title="Wolves of Wallstreet"
             date="Sept. 18-25, 2025"
             location="BITS Pilani Dubai Campus"
-            description="Finance trading simulation event"
+            description="Finance trading event"
             img="/Assets/Events/e-summit.jpg"
             action="view"
+          />
+          <EventCard
+              title="Hackathon"
+              date="Oct 15-16, 2024"
+              location="BITS Pilani Dubai Campus"
+              description="A 24-hour coding marathon where teams compete to build innovative software solutions for given problem statements."
+              img="/Assets/Events/hackathon.jpg"
+              action="view"
+          />
+          <EventCard
+              title="Investor Meetup"
+              date="Nov 20, 2024"
+              location="Downtown Dubai"
+              description="A networking event for startups to connect with potential investors and venture capitalists from the UAE ecosystem."
+              img="/Assets/Events/investor-meetup.jpg"
+              action="view"
           />
         </div>
 
