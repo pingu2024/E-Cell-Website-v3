@@ -2,7 +2,7 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronDown, Users, Coins, Laptop } from "lucide-react";
+import { ChevronDown, ChevronRight, Users, Coins, Laptop } from "lucide-react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
@@ -44,19 +44,17 @@ export default function HomePage() {
                   Apply to Incubator →
                 </Button>
               </div>
-              <div className="text-4xl animate-bounce">↓</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Who Are We Section */}
-      <section id="about" className="bg-neutral-900 px-6 py-16">
+      <section id="about" className="bg-neutral-900 px-6 py-8">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-[#ffd700]">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-white relative pb-4 after:content-[''] after:absolute after:w-24 after:h-1 after:bg-[#ffd700] after:bottom-0 after:left-1/2 after:-translate-x-1/2">
             Who Are We?
           </h2>
-          <hr className="w-20 h-1 bg-[#ffd700] mx-auto mb-8" />
 
           <div className="text-base md:text-lg leading-relaxed space-y-6">
             <div>
@@ -83,15 +81,14 @@ export default function HomePage() {
             </p>
           </div>
 
-          <h3 className="text-2xl md:text-3xl font-bold text-center mt-16 mb-4 text-[#ffd700]">
-            Previous Success Stories
+          <h3 className="text-2xl md:text-3xl font-bold text-center mt-8 mb-4 text-white relative pb-4 after:content-[''] after:absolute after:w-24 after:h-1 after:bg-[#ffd700] after:bottom-0 after:left-1/2 after:-translate-x-1/2">
+            Previous Events
           </h3>
-          <hr className="w-20 h-1 bg-[#ffd700] mx-auto mb-8" />
         </div>
       </section>
 
       {/* Success Stories Section */}
-      <section className="px-6 py-12 bg-neutral-900">
+      <section className="px-6 py-8 bg-neutral-900">
         <div className="max-w-6xl mx-auto">
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mb-8">
             <SuccessStoryCard
@@ -127,22 +124,22 @@ export default function HomePage() {
               <SuccessStoryCard
                 title="Urban Farming"
                 description="Innovative vertical farming technology reducing water usage by 90% in desert regions"
-                img="/Assets/startups/startup6.jpg"
+                img="/Assets/test-placeholder-pics/cat-placeholder.jpg"
               />
               <SuccessStoryCard
                 title="CleanEnergy"
                 description="Solar solution provider that has installed over 5,000 units across residential communities"
-                img="/Assets/startups/startup7.jpg"
+                img="/Assets/test-placeholder-pics/cat-placeholder.jpg"
               />
               <SuccessStoryCard
                 title="Travel Tech"
                 description="AI-powered travel platform that has transformed tourism experiences in the region"
-                img="/Assets/startups/startup8.jpg"
+                img="/Assets/test-placeholder-pics/cat-placeholder.jpg"
               />
               <SuccessStoryCard
                 title="Retail Revolution"
                 description="Omnichannel retail solution adopted by major shopping centers in Dubai and Abu Dhabi"
-                img="/Assets/startups/startup9.jpg"
+                img="/Assets/test-placeholder-pics/cat-placeholder.jpg"
               />
             </div>
           )}
@@ -151,20 +148,13 @@ export default function HomePage() {
           <div id="incubator" className="text-center mt-8">
             <Button
               onClick={() => {
-                setShowMoreStories(!showMoreStories);
-                if (showMoreStories) {
-                  scrollToSection("about");
-                }
+                window.location.href = "/events";
               }}
               variant="outline"
               className="border-[#ffd700] text-[#ffd700] hover:bg-[#ffd700] hover:text-black bg-neutral-900 px-6 py-3"
             >
-              {showMoreStories ? "Show Less" : "View More Success Stories"}
-              <ChevronDown
-                className={`ml-2 h-5 w-5 transition-transform ${
-                  showMoreStories ? "rotate-180" : ""
-                }`}
-              />
+              View More Events
+              <ChevronRight className="ml-2 h-5 w-5" />
             </Button>
           </div>
         </div>
@@ -188,7 +178,7 @@ export default function HomePage() {
 
             {/* Content */}
             <div className="flex-1 text-left">
-              <h3 className="text-3xl font-bold text-[#ffd700] mb-4">
+              <h3 className="text-3xl font-bold text-white mb-4 relative pb-4 after:content-[''] after:absolute after:w-24 after:h-1 after:bg-[#ffd700] after:bottom-0 after:left-0">
                 Turning Ideas Into Reality
               </h3>
               <p className="text-base md:text-lg leading-relaxed mb-8">
@@ -235,17 +225,54 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Our Startups Section */}
+      <section className="px-6 py-12 bg-neutral-900">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-10 relative pb-4 after:content-[''] after:absolute after:w-24 after:h-1 after:bg-[#ffd700] after:bottom-0 after:left-1/2 after:-translate-x-1/2">
+            Our Startups
+          </h2>
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mb-8">
+            <StartupCard
+              title="TechInnovate"
+              description="AI-powered solutions for sustainable business growth"
+              img="/Assets/test-placeholder-pics/cat-placeholder.jpg"
+            />
+            <StartupCard
+              title="EcoSolutions"
+              description="Green technology for environmental sustainability"
+              img="/Assets/test-placeholder-pics/cat-placeholder.jpg"
+            />
+            <StartupCard
+              title="FinTech Pro"
+              description="Revolutionary financial technology for modern businesses"
+              img="/Assets/test-placeholder-pics/cat-placeholder.jpg"
+            />
+          </div>
+          <div className="text-center mt-8">
+            <Button
+              onClick={() => {
+                window.location.href = "/incubator";
+              }}
+              variant="outline"
+              className="border-[#ffd700] text-[#ffd700] hover:bg-[#ffd700] hover:text-black bg-neutral-900 px-6 py-3"
+            >
+              View All Startups
+              <ChevronRight className="ml-2 h-5 w-5" />
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* In Partnership With Section */}
       <section className="px-6 py-16 bg-neutral-900">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-[#ffd700] mb-4">
+          <h2 className="text-3xl font-bold text-white mb-4 text-center relative pb-4 after:content-[''] after:absolute after:w-24 after:h-1 after:bg-[#ffd700] after:bottom-0 after:left-1/2 after:-translate-x-1/2">
             In Partnership With
           </h2>
-          <hr className="w-20 h-1 bg-[#ffd700] mx-auto mb-12" />
           <div className="flex justify-center">
             <Image
-              src="/Assets/E-Cell-assets/Hi Incubator.svg"
-              alt="Hi Incubator Logo"
+              src="/assets/ecell_assets/incubator.webp"
+              alt="Incubator Partnership"
               width={400}
               height={200}
               className="max-w-full h-auto"
@@ -268,7 +295,7 @@ function SuccessStoryCard({
   img: string;
 }) {
   return (
-    <div className="bg-neutral-800 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all hover:-translate-y-1">
+    <div className="bg-neutral-800 rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-[#ffd700]/30 transition-[transform,box-shadow] hover:-translate-y-1">
       <div className="h-48 relative">
         <Image src={img} alt={title} fill className="object-cover" />
       </div>
@@ -291,10 +318,33 @@ function FeatureCard({
   description: string;
 }) {
   return (
-    <div className="bg-neutral-800 p-5 rounded-lg text-center hover:bg-neutral-700 transition-colors">
+    <div className="bg-neutral-800 p-5 rounded-lg text-center hover:bg-neutral-700 hover:shadow-2xl hover:shadow-[#ffd700]/30 transition-[background-color,box-shadow] hover:-translate-y-1">
       <div className="flex justify-center mb-3">{icon}</div>
       <h4 className="font-semibold mb-2 text-gray-100">{title}</h4>
       <p className="text-sm text-gray-400">{description}</p>
+    </div>
+  );
+}
+
+// Startup Card Component
+function StartupCard({
+  title,
+  description,
+  img,
+}: {
+  title: string;
+  description: string;
+  img: string;
+}) {
+  return (
+    <div className="bg-neutral-800 rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-[#ffd700]/30 transition-[transform,box-shadow] hover:-translate-y-1">
+      <div className="h-48 relative">
+        <Image src={img} alt={title} fill className="object-cover" />
+      </div>
+      <div className="p-5">
+        <h3 className="text-xl font-semibold mb-3 text-gray-100">{title}</h3>
+        <p className="text-gray-300 leading-relaxed">{description}</p>
+      </div>
     </div>
   );
 }

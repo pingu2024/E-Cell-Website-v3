@@ -11,14 +11,16 @@ export default function Footer() {
             <h3 className="text-xl font-semibold mb-4">Navigate</h3>
             <ul className="space-y-2">
               <li><a href="/" className="text-gray-400 hover:text-white transition-colors">Home</a></li>
-              <li><a href="/events" className="text-gray-400 hover:text-white transition-colors">Events</a></li>
               <li><a href="/team" className="text-gray-400 hover:text-white transition-colors">Our Team</a></li>
-              <li><a href="/contact" className="text-gray-400 hover:text-white transition-colors">Contact Us</a></li>
+              <li><a href="/events" className="text-gray-400 hover:text-white transition-colors">Events</a></li>
+              <li><a href="/incubator" className="text-gray-400 hover:text-white transition-colors">Incubator</a></li>
+              <li><a href="/esummit" className="text-gray-400 hover:text-white transition-colors">E-Summit</a></li>
               <li>
                 <a href="/tedx" className="font-semibold text-[#e62b1e] hover:text-[#ff6b5e] transition-colors">
                   TED<span className="font-normal">x</span>
                 </a>
               </li>
+              <li><a href="/contact" className="text-gray-400 hover:text-white transition-colors">Contact Us</a></li>
             </ul>
           </div>
 
@@ -26,16 +28,16 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-semibold mb-4">Connect With Us</h3>
             <div className="flex gap-4">
-              <a href="https://www.instagram.com/ecell_bpdc/" className="w-10 h-10 flex items-center justify-center rounded-full bg-neutral-800 hover:bg-[#e62b1e] transition-all hover:-translate-y-1">
+              <a href="https://www.instagram.com/ecell_bpdc/" className="w-10 h-10 flex items-center justify-center rounded-full bg-neutral-800 hover:bg-gradient-to-r from-[#f09433] to-[#bc1888] transition-all hover:-translate-y-1 duration-300">
                 <FaInstagram className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 flex items-center justify-center rounded-full bg-neutral-800 hover:bg-[#e62b1e] transition-all hover:-translate-y-1">
+              <a href="#" className="w-10 h-10 flex items-center justify-center rounded-full bg-neutral-800 hover:bg-[#e62b1e] transition-all hover:-translate-y-1 duration-300">
                 <FaYoutube className="w-5 h-5" />
               </a>
-              <a href="mailto:info@ecellbitspilanidubai.com" className="w-10 h-10 flex items-center justify-center rounded-full bg-neutral-800 hover:bg-[#e62b1e] transition-all hover:-translate-y-1">
+              <a href="mailto:info@ecellbitspilanidubai.com" className="w-10 h-10 flex items-center justify-center rounded-full bg-neutral-800 hover:bg-gradient-to-r hover:from-[#f59e0b] hover:to-[#ea580c] transition-all hover:-translate-y-1 duration-300">
                 <HiMail className="w-5 h-5" />
               </a>
-              <a href="https://www.linkedin.com/company/e-cell-bpdc/" className="w-10 h-10 flex items-center justify-center rounded-full bg-neutral-800 hover:bg-[#e62b1e] transition-all hover:-translate-y-1">
+              <a href="https://www.linkedin.com/company/e-cell-bpdc/" className="w-10 h-10 flex items-center justify-center rounded-full bg-neutral-800 hover:bg-[#0077b5] transition-all hover:-translate-y-1 duration-300">
                 <FaLinkedinIn className="w-5 h-5" />
               </a>
             </div>

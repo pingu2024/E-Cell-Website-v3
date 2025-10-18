@@ -9,10 +9,10 @@ export default function Navbar() {
       <div className="flex justify-between items-center h-full px-[5%]">
         <div className="logo">
           <Image
-            src="/Assets/E-Cell-assets/Transparent_Ecell.png"
+            src="/assets/ecell_assets/e-cell_logoanimated_cropped.gif"
             alt="E-Cell Logo"
-            width={100}
-            height={50}
+            width={120}
+            height={60}
             className="max-h-[5.5vh] w-auto"
           />
         </div>
@@ -24,16 +24,28 @@ export default function Navbar() {
             Home
           </Link>
           <Link
+            href="/team"
+            className="text-gray-200 font-medium hover:text-[#d8a444] transition-colors text-[2.2vh]"
+          >
+            Our Team
+          </Link>
+          <Link
             href="/events"
             className="text-gray-200 font-medium hover:text-[#d8a444] transition-colors text-[2.2vh]"
           >
             Events
           </Link>
           <Link
-            href="/team"
+            href="/incubator"
             className="text-gray-200 font-medium hover:text-[#d8a444] transition-colors text-[2.2vh]"
           >
-            Our Team
+            Incubator
+          </Link>
+          <Link
+            href="/esummit"
+            className="text-gray-200 font-medium hover:text-[#d8a444] transition-colors text-[2.2vh]"
+          >
+            E-Summit
           </Link>
           <Link
             href="/tedx"

@@ -2,6 +2,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import {
   Mail,
   Phone,
@@ -89,13 +90,25 @@ export default function ContactPage() {
   return (
     <main className="bg-neutral-900 text-gray-100">
       {/* Hero Section */}
-      <section className="relative text-center text-white py-24 px-6 mb-12 bg-cover bg-center bg-[url('/Assets/E-Cell-assets/bits_campus.jpg')]">
-        <div className="absolute inset-0 bg-neutral-800/50 dark:bg-neutral-900/60" />
-        <div className="relative z-10">
+      <section className="relative text-center text-white py-16 px-6 mb-12 overflow-hidden h-[400px]">
+        {/* Static Background */}
+        <div className="absolute inset-0 w-full h-full">
+          <Image
+            src="/assets/ecell_assets/bits_campus.jpg"
+            alt="BITS Campus"
+            fill
+            className="object-cover object-[center_30%]"
+            priority
+          />
+        </div>
+        
+        {/* Subtle Black Overlay */}
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="relative z-10 flex flex-col items-center justify-center h-full pt-16">
           <h1 className="text-4xl md:text-6xl font-bold mb-4">Contact Us</h1>
-          <p className="text-lg max-w-2xl mx-auto">
-            We're here to help you with any questions about entrepreneurship and
-            innovation.
+          <p className="text-lg md:text-xl max-w-2xl mx-auto">
+            We're here to help you with any questions on your journey towards entrepreneurship and
+            innovation
           </p>
         </div>
       </section>
@@ -105,7 +118,7 @@ export default function ContactPage() {
         <div className="grid gap-8 md:grid-cols-2">
           {/* Contact Form Section */}
           <div className="bg-neutral-800 rounded-xl p-8 shadow-lg">
-            <h2 className="text-3xl font-bold mb-6 text-[#ffd700]">
+            <h2 className="text-3xl font-bold mb-6 text-white text-center relative pb-4 after:content-[''] after:absolute after:w-24 after:h-1 after:bg-[#ffd700] after:bottom-0 after:left-1/2 after:-translate-x-1/2">
               Get in Touch
             </h2>
             <form onSubmit={handleSubmit} className="space-y-5">
@@ -227,7 +240,7 @@ export default function ContactPage() {
           <div className="space-y-8">
             {/* Location Info */}
             <div className="bg-neutral-800 rounded-xl p-8 shadow-lg">
-              <h2 className="text-3xl font-bold mb-6 text-[#ffd700]">
+              <h2 className="text-3xl font-bold mb-6 text-white text-center relative pb-4 after:content-[''] after:absolute after:w-24 after:h-1 after:bg-[#ffd700] after:bottom-0 after:left-1/2 after:-translate-x-1/2">
                 Visit Us
               </h2>
 
@@ -242,7 +255,7 @@ export default function ContactPage() {
                 />
               </div>
 
-              <div className="space-y-4">
+              <div className="space-y-8">
                 <h3 className="text-xl font-semibold text-gray-100">
                   E-Cell Office
                 </h3>
@@ -252,11 +265,11 @@ export default function ContactPage() {
                   Dubai, UAE
                 </p>
 
-                <div className="mt-6">
-                  <h4 className="text-lg font-semibold mb-3 text-gray-100">
+                <div className="mt-12">
+                  <h4 className="text-lg font-semibold mb-6 text-gray-100">
                     Directions:
                   </h4>
-                  <ul className="space-y-2 text-gray-400 text-sm">
+                  <ul className="space-y-4 text-gray-400 text-sm">
                     <li>
                       • From Main Campus Entrance: Head to Building 1, 1st Floor,
                       Room E-123
@@ -269,11 +282,11 @@ export default function ContactPage() {
                   </ul>
                 </div>
 
-                <div className="mt-6">
-                  <h4 className="text-lg font-semibold mb-3 text-gray-100">
+                <div className="mt-12">
+                  <h4 className="text-lg font-semibold mb-6 text-gray-100">
                     Office Hours:
                   </h4>
-                  <ul className="space-y-2 text-gray-400 text-sm">
+                  <ul className="space-y-4 text-gray-400 text-sm">
                     <li className="flex items-center">
                       <Clock className="w-4 h-4 mr-2 text-[#ffd700]" />
                       Monday - Thursday: 10:00 AM - 4:00 PM
@@ -293,9 +306,10 @@ export default function ContactPage() {
           </div>
         </div>
 
-        {/* Alternative Contact Section */}
+        {/*
+        Alternative Contact Section
         <div className="mt-8 bg-neutral-800 rounded-xl p-8 shadow-lg">
-          <h2 className="text-3xl font-bold text-center mb-8 text-[#ffd700]">
+          <h2 className="text-3xl font-bold text-center mb-8 text-white relative pb-4 after:content-[''] after:absolute after:w-24 after:h-1 after:bg-[#ffd700] after:bottom-0 after:left-1/2 after:-translate-x-1/2">
             Contact Us
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
@@ -349,6 +363,7 @@ export default function ContactPage() {
             </div>
           </div>
         </div>
+        */}
 
         {/* FAQ Section */}
         <div className="mt-12 bg-neutral-800 rounded-xl p-8 shadow-lg">
@@ -387,9 +402,9 @@ export default function ContactPage() {
         </div>
 
         {/* Newsletter Section */}
-        <div className="mt-12 bg-neutral-700 rounded-xl p-8 shadow-lg">
+        <div className="mt-12 bg-neutral-800 rounded-xl p-8 shadow-lg">
           <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-4 text-[#ffd700]">
+            <h2 className="text-3xl font-bold mb-4 text-white relative pb-4 after:content-[''] after:absolute after:w-24 after:h-1 after:bg-[#ffd700] after:bottom-0 after:left-1/2 after:-translate-x-1/2">
               Stay Updated
             </h2>
             <p className="text-gray-300 mb-6">
